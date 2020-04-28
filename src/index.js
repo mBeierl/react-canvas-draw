@@ -155,6 +155,11 @@ export default class extends PureComponent {
       // Signal this.loop function that values changed
       this.valuesChanged = true;
     }
+
+    if (prevProps.imgSrc !== this.props.imgSrc) {
+      this.drawImage();
+    }
+
   }
 
   componentWillUnmount = () => {
